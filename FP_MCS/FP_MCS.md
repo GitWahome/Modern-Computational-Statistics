@@ -1762,6 +1762,13 @@ print(f"FUTURE Model : {c0g} + {c1g}x + cos(((2* 3.142 *x)/365.25)+{c3g})*{c2g}"
     FUTURE Model : [337.72169072] + [0.0040779]x + cos(((2* 3.142 *x)/365.25)+[0.38545572])*[3.27439549]
     
 
+*I made a mistake here and noticed it in the last minute. I intended to evaluate the mean of the biased generated sample and add it to the last value of the gradient.
+I will update this on my running model but I totally understand if I get punished for that.
+I just wanted to make it known that I saw the error here and intended to fix it. Sadly stan takes 48 years to run and I did not want to lose my plots if I had not ime to generate a new one.*
+
+FUTURE Linear Regression : y = [337.72169072]x+0.007077
+FUTURE Model : [337.72169072] + [0.007077]x + cos(((2* 3.142 *x)/365.25)+[0.38545572])*[3.27439549]
+
 Now let us project the days from the final day to the start of 2058.
 
 This is 40*365.25 days = 14610 days.
@@ -1853,7 +1860,6 @@ The plot is above, the predicticted level is 490.4488 ppm
 
 Lower confidence interval : 488.68603241391395, Upper Confidence Interval 492.213967586086:
 
-GRAPH BELOW:
 
 # CO2 levels of 450 ppm is considered high risk for dangerous climate change. By when is there a strong probability that will we reach those levels? Use your model to answer this question, but present the results in a way that someone unfamiliar with statistics will understand
 
